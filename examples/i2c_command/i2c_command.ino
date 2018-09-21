@@ -1,7 +1,7 @@
 #include <LOLIN_HP303B.h>
 
 // HP303B Opject
-HP303B HP303BPressureSensor;
+LOLIN_HP303B HP303BPressureSensor;
 
 
 void setup()

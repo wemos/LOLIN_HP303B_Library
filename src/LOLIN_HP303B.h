@@ -11,13 +11,13 @@
 #include <SPI.h>
 #include "util/hp303b_consts.h"
 
-class HP303B
+class LOLIN_HP303B
 {
 public:
   //constructor
-  HP303B(void);
+  LOLIN_HP303B(void);
   //destructor
-  ~HP303B(void);
+  ~LOLIN_HP303B(void);
   //begin
   void begin(TwoWire &bus, uint8_t slaveAddress);
   void begin(uint8_t slaveAddress=HP303B__STD_SLAVE_ADDRESS);

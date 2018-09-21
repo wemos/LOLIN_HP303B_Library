@@ -1,7 +1,7 @@
 #include <LOLIN_HP303B.h>
 
 // HP303B Opject
-HP303B HP303BPressureSensor = HP303B();
+LOLIN_HP303B HP303BPressureSensor = LOLIN_HP303B();
 
 void setup()
 {
@@ -12,7 +12,7 @@ void setup()
   //The parameter 0x76 is the bus address. The default address is 0x77 and does not need to be given.
   //HP303BPressureSensor.begin(Wire, 0x76);
   //Use the commented line below instead to use the default I2C address.
-  HP303BPressureSensor.begin(Wire);
+  HP303BPressureSensor.begin();
 
   //temperature measure rate (value from 0 to 7)
   //2^temp_mr temperature measurement results per second

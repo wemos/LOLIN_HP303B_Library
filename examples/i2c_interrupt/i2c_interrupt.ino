@@ -1,7 +1,7 @@
 #include <LOLIN_HP303B.h>
 
 // HP303B Opject
-HP303B HP303BPressureSensor = HP303B();
+LOLIN_HP303B HP303BPressureSensor = LOLIN_HP303B();
 
 void onFifoFull();
 
@@ -23,7 +23,7 @@ void setup()
   //The parameter 0x76 is the bus address. The default address is 0x77 and does not need to be given.
   //HP303BPressureSensor.begin(Wire, 0x76);
   //Use the commented line below instead to use the default I2C address.
-  HP303BPressureSensor.begin(Wire);
+  HP303BPressureSensor.begin();
   
   int16_t ret = HP303BPressureSensor.setInterruptPolarity(1);
   ret = HP303BPressureSensor.setInterruptSources(1, 0, 0);
